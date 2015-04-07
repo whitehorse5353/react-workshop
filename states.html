@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>ReactJS - Session</title>
+    <meta charset="UTF-8">
+    <title>react state</title>        
+</head>
+<body>    
+    <div id="master" class="container"></div>
+    <script type="text/javascript" src="js/react.min.js"></script>
+    <script type="text/javascript" src="js/JSXTransformer.js"></script>
+    <script type="text/jsx">          
+        var StateComponent = React.createClass({
+            getInitialState: function(){
+                return {keyVal: ''}
+            },
+            render: function(){
+                return (<div>
+                            <input type='text' onChange={this.handleOnChange} value={this.state.keyVal} />
+                            {this.state.keyVal}
+                        </div>)
+            },
+            handleOnChange: function(e){
+                this.setState({keyVal: e.target.value});                
+            }
+        });          
+        
+        React.render(<StateComponent />, document.getElementById('master'));
+    </script>
+</body>
+</html>
