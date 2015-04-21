@@ -18,7 +18,7 @@ var BaseComponent = React.createClass({
         this.refs.item.getDOMNode().value = '';
     },
     render: function () {
-        var item = this.state.list.map(function(item){
+        var item = this.state.list.map(function (item) {
             return <li> {item} </li>;
         });
         return ( < form action='javascript:void(0)' onSubmit={this.addItem} >

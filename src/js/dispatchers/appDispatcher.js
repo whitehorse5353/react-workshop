@@ -3,7 +3,7 @@ var extend = require('react/lib/Object.assign');
 var Dispatcher = new Dispatch();
 
 var AppDispatcher = extend(Dispatcher, {
-    addItem: function(pl){
+    addItem: function (pl) {
         this.dispatch({
             type: pl.type,
             d: pl
